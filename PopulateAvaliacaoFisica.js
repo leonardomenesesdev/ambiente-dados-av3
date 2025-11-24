@@ -1,8 +1,8 @@
 import { getConnection } from "./db.js";
 import { faker } from "@faker-js/faker";
 
-const total = 30;     // quantidade a popular
-const chunk = 1000;   // mesmo padrão do seu código
+const total = 30;   
+const chunk = 1000;   
 
 function gerarAvaliacao() {
     const altura = faker.number.float({ min: 1.40, max: 2.00, precision: 0.01 });
@@ -11,8 +11,8 @@ function gerarAvaliacao() {
     const gordura = faker.number.float({ min: 10, max: 35, precision: 0.1 });
 
     return [
-        faker.date.recent().toISOString().slice(0, 19).replace("T", " "), // data_avaliacao
-       faker.helpers.arrayElement([  // objetivo
+        faker.date.recent().toISOString().slice(0, 19).replace("T", " "),
+       faker.helpers.arrayElement([  
             "Ok",
             "Avaliação inicial",
             "Boa evolução",

@@ -1,13 +1,13 @@
 import { getConnection } from "./db.js";
 import { faker } from "@faker-js/faker";
 
-const total = 30;     // quantidade de treinos
-const chunk = 1000;   // processamento por lote
+const total = 30;                                                                                               
+const chunk = 1000;   
 
 function gerarTreino() {
     return [
-        faker.word.words(2),          // nome
-        faker.helpers.arrayElement([  // objetivo
+        faker.word.words(2),         
+        faker.helpers.arrayElement([ 
             "Hipertrofia",
             "Emagrecimento",
             "Resistência",

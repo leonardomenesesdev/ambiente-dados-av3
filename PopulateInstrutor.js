@@ -9,7 +9,7 @@ function gerarInstrutor() {
         faker.person.firstName(),
         faker.person.lastName(),
         faker.string.numeric({ length: 11, allowLeadingZeros: true }), 
-       faker.helpers.arrayElement([  // objetivo
+       faker.helpers.arrayElement([  
             "Boxe",
             "Yoga",
             "Jiu-Jitsu",
@@ -38,7 +38,7 @@ async function popular() {
                 valores.push(gerarInstrutor());
             }
 
-            // Agora sim: um único INSERT por chunk
+
             const placeholders = valores.map(() => '(?, ?, ?, ?, ?, ?)').join(', ');
             const flat = valores.flat();
 

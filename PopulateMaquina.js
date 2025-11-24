@@ -2,15 +2,15 @@ import { getConnection } from "./db.js";
 import mysql from "mysql2/promise";
 
 const TOTAL = 10_000_000;   // 10 milhões
-const CHUNK = 5000;         // Valor SEGURO
+const CHUNK = 5000;       
 
 
 function gerarEquipamento(i) {
   return [
-    `Equipamento_${i % 100}`,   // nome repetido (super rápido)
-    "OK",                       // estado fixo
-    "2020-01-01 00:00:00",      // data fixa
-    "Categoria_A"               // categoria fixa
+    `Equipamento_${i % 100}`,   
+    "OK",                       
+    "2020-01-01 00:00:00",      
+    "Categoria_A"               
   ];
 }
 

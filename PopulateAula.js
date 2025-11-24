@@ -1,23 +1,23 @@
 import { getConnection } from "./db.js";
 import { faker } from "@faker-js/faker";
 
-const total = 30;   // quantidade desejada
-const chunk = 1000; // lotes grandes (mantido do seu exemplo)
+const total = 30;   
+const chunk = 1000; 
 
 function gerarAula() {
     return [
-       faker.helpers.arrayElement([  // objetivo
+       faker.helpers.arrayElement([  
             "Aula de Boxe",
             "Aula de Yoga",
             "Aula de Jiu-Jitsu",
             "Aula de Beach Tennis",
             "Aula de Crossfit"
-        ]),        faker.lorem.sentence(5), // descricao
-        faker.number.int({ min: 1, max: 5 }), // nível
-        faker.number.int({ min: 10, max: 40 }), // capacidade
-        faker.location.streetAddress(), // local da aula
-        faker.date.soon().toISOString().slice(11, 19), // hora_inicio (HH:MM:SS)
-        faker.number.int({ min: 30, max: 90 }) // duração em minutos
+        ]),        faker.lorem.sentence(5), 
+        faker.number.int({ min: 1, max: 5 }), 
+        faker.number.int({ min: 10, max: 40 }),
+        faker.location.streetAddress(), 
+        faker.date.soon().toISOString().slice(11, 19),
+        faker.number.int({ min: 30, max: 90 })
     ];
 }
 
