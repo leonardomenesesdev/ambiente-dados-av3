@@ -43,7 +43,7 @@ async function popular() {
     }
 
     await conn.commit();
-    console.log("✔ Finalizado! 10 milhões inseridos.");
+    console.log("Finalizado! 10 milhões inseridos.");
   } catch (err) {
     console.error("Erro:", err);
     await conn.rollback();
