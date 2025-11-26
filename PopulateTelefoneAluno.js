@@ -4,7 +4,7 @@ import { faker } from "@faker-js/faker";
 const total = 30;
 
 function gerarTelefone() {
-    return faker.string.numeric(11); // ex: 11987654321
+    return faker.string.numeric(11); //ex: 11987654321
 }
 
 async function popular() {
@@ -31,7 +31,7 @@ async function popular() {
         for (let i = 0; i < total; i++) {
             valores.push([
                 gerarTelefone(),
-                faker.helpers.arrayElement(ids) // 💥 garante FK válida
+                faker.helpers.arrayElement(ids)
             ]);
         }
 

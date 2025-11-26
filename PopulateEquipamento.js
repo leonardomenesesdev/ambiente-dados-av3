@@ -1,7 +1,7 @@
 import { getConnection } from "./db.js";
 import mysql from "mysql2/promise";
 
-const TOTAL = 10_000_000;   // 10 milhões
+const TOTAL = 10_000_000;   //10 milhoes
 const CHUNK = 5000;       
 
 

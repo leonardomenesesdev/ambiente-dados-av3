@@ -4,8 +4,7 @@ import { faker } from "@faker-js/faker";
 const total = 30;
 
 function gerarTelefone() {
-    // formato seguro com no máximo 15 caracteres
-    return faker.string.numeric(11); // ex: 11987654321
+    return faker.string.numeric(11); 
 }
 
 async function popular() {
@@ -32,7 +31,7 @@ async function popular() {
         for (let i = 0; i < total; i++) {
             valores.push([
                 gerarTelefone(),
-                faker.helpers.arrayElement(ids) // FK válida
+                faker.helpers.arrayElement(ids)
             ]);
         }
 
