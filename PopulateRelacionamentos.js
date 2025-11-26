@@ -74,11 +74,6 @@ async function popularRelacionamentos() {
         await inserirRelacionamento(conn, "FichaTreino_Treino", "id_ficha", "id_treino",
             gerarPares(idsFicha, idsTreino, 30));
 
-        await inserirRelacionamento(conn, "Pagamento_Aula", "id_aula", "id_pagamento",
-            gerarPares(idsAula, idsPagamento, 30));
-
-        await inserirRelacionamento(conn, "Pagamento_PlanoMensal", "id_pagamento", "id_plano",
-            gerarPares(idsPagamento, idsPlano, 30));
 
         await conn.commit();
         console.log("Relacionamentos inseridos com sucesso!");
